@@ -13,6 +13,6 @@ def get_embedding_model():
         return model
 
     except Exception as e:
-        error_message = CustomException("Failed to get embedding model")
+        error_message = CustomException("Failed to get embedding model", e)
         logger.error(str(error_message))
         raise error_message

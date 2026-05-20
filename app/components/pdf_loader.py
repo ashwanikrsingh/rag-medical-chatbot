@@ -45,7 +45,7 @@ def create_text_chunks(documents):
         return chunks
     
     except Exception as e:
-        error_message = CustomException("Not able to create chunks")
+        error_message = CustomException("Not able to create chunks", e)
         logger.error(str(error_message))
         return []
 
