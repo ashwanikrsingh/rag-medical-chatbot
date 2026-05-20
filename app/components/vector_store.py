@@ -21,10 +21,11 @@ def load_vector_db():
             )
         else:
             logger.warning("No Vector Store found")
-            
+
     except Exception as e:
         error_message = CustomException("Failed to load vector store", e)
         logger.error(str(error_message))
+        raise error_message
 
 
 # Creating new vector store
@@ -47,3 +48,4 @@ def save_vector_store(text_chunks):
     except Exception as e:
         error_message = CustomException("Failed to create vector store", e)
         logger.error(str(error_message))
+        raise error_message

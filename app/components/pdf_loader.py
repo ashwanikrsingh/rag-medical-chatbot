@@ -29,7 +29,7 @@ def load_pdf_files():
     except Exception as e:
         error_message = CustomException("Failed to load PDF", e)
         logger.error(str(error_message))
-        return []
+        raise error_message
     
 
 def create_text_chunks(documents):
@@ -47,5 +47,5 @@ def create_text_chunks(documents):
     except Exception as e:
         error_message = CustomException("Not able to create chunks", e)
         logger.error(str(error_message))
-        return []
+        raise error_message
 
