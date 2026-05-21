@@ -1,0 +1,43 @@
+# Git and local metadata
+.git/
+.gitignore
+
+# Python caches and build output
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+
+# Secrets and local environment files
+.env
+.env.example
+
+# Logs and runtime output
+logs/
+*.log
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker/local compose files that are not needed inside the image
+docker-compose*.yml
+
+# Keep these by default because the app can use them at runtime.
+# Uncomment only if you mount them as volumes or generate them during build/startup.
+# data/
+# vectorstore/
