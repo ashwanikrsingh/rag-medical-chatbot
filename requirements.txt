@@ -8,3 +8,4 @@ fastapi
 python-dotenv
 langchain_text_splitters
 sentence-transformers
+langchain-classic
