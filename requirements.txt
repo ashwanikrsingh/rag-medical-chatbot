@@ -9,3 +9,5 @@ python-dotenv
 langchain_text_splitters
 sentence-transformers
 langchain-classic
+flask
+langchain_groq

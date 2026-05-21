@@ -1,4 +1,3 @@
-import os
 from langchain_classic.chains.retrieval import create_retrieval_chain
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import PromptTemplate
@@ -17,15 +16,15 @@ Context:
 {context}
 
 Question:
-{question}
+{input}
 
 Answer:
 """
 
 def custom_prompt():
-    return PromptTemplate(template=CUSTOM_PROMPT_TEMPLATE, input_variables=["context", "question"])
+    return PromptTemplate(template=CUSTOM_PROMPT_TEMPLATE, input_variables=["context", "input"])
 
-def create_retrieval_chain():
+def get_retrieval_chain():
     try:
         logger.info("Loading vector store for context")
         db = load_vector_db()
